@@ -1,3 +1,4 @@
+/* General overall design section */
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +15,9 @@ body {
 .container {
     padding: 20px;
 }
+/* End of General overall design section */
 
+/*Typing effect section*/
 .typing-container {
     display: flex;
     justify-content: center;
@@ -36,26 +39,16 @@ body {
     50% { opacity: 0; }
     100% { opacity: 1; }
 }
+/*End of Typing effect section*/
 
 /* Scroll Section */
-
-.section-content {
-    margin-bottom: 40px; /* Adds space between sections */
-    padding: 20px; /* Optional: Adjust padding if needed */
-}
 .scroll-section {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
     margin-top: 80px;
-    margin-bottom: 100px; /* Adds space after scroll section */
-}
-
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px; /* Adds space after section title */
+    margin-bottom: 100px; 
 }
 
 .scroll-container {
@@ -96,23 +89,35 @@ body {
     background-color: #000000;
 } */
 
+/* End of Scroll Section */
+
+/*Common for all the sub sections, they come under the same class*/
+.section-content {
+    margin-bottom: 40px; /* Adds space between sections */
+    padding: 20px; /* Optional */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px; /* Adds space after section title */
+}
+/*End of Common for all the sub sections, they come under the same class*/
+
 /* About Me Section */
 .about-content {
     position: relative;
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    background-color: #000000; /* Full black background */
-    /* border: 2px solid rgb(255, 255, 255); */
-    /* border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px; */
+    background-color: #000000;
     align-items: center;
     border-radius: 20px;
     transition: background-color 0.3s ease, box-shadow 0.8s ease; /* Transition effect */
 }
 
 .about-content:hover {
-    box-shadow: 0 0 15px #4d6061; /* Glowing effect on hover */
+    box-shadow: 0 0 15px #4d6061; 
 }
 
 .about-text {
@@ -120,8 +125,8 @@ body {
 }
 
 .about-text h3 {
-    font-size: 1.6rem; /* Larger header-like text */
-    line-height: 1.2; /* Adjust line height for readability */
+    font-size: 1.6rem;
+    line-height: 1.2; 
     color: white;
     margin-right: 20px; /* Spacing from the image */
     margin-bottom: 20px;
@@ -129,8 +134,8 @@ body {
 }
 
 .about-text h6 {
-    font-size: 1.3rem; /* Larger header-like text */
-    line-height: 1.2; /* Adjust line height for readability */
+    font-size: 1.3rem; 
+    line-height: 1.2; 
     color: #4d6061;
     margin-right: 100px; /* Spacing from the image */
     word-wrap: break-word; /* Ensure text wraps naturally */
@@ -140,15 +145,7 @@ body {
     max-width: 300px;
     border-radius: 15px;
 }
-
-/* .side-line {
-    position: absolute;
-    height: 100%;
-    width: 4px;
-    background-color: #fff; 
-    left: -20px;
-} */
-
+/* End of About Me Section */
 
 /* Work Experience Section */
 .work-experience-boxes {
@@ -169,6 +166,7 @@ body {
     transform: translateY(-10px);
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
 }
+/* End of Work Experience Section */
 
 /* Certifications Section */
 .certification-cards {
@@ -212,10 +210,4 @@ body {
 .card:hover .card-back {
     transform: rotateY(0deg);
 }
-
-/* Section Titles */
-.section-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 30px;
-}
+/* Certifications Section */
