@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed Muzzammil Shah</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Typing effect section -->
+        <div class="typing-container">
+            <span class="typed-text"></span>
+            <span class="cursor">&nbsp;</span>
+        </div>
+
+        <!-- Scrollbar Section -->
+        <section class="scroll-section">
+            <div class="scroll-container">
+                <div class="scroll-item active">About Me</div>
+                <div class="scroll-item">Work Experience</div>
+                <div class="scroll-item">Certifications</div>
+                <div class="scroll-item">Roles & Responsibilities</div>
+                <div class="scroll-item">Education</div>
+            </div>
+            <!-- <div class="scroll-arrows">
+                <button class="scroll-left">&lt;</button>
+                <button class="scroll-right">&gt;</button>
+            </div> -->
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>I am a detail-oriented AI Engineer with a passion for developing innovative tools, systems, and processes that bring the practical application of AI to life.</h3>
+                    <h6>My work focuses on delivering high-quality results, consistently improving efficiency, and driving impactful outcomes.</h6>
+                </div>
+                <!-- <div class="side-line"></div> -->
+                <img src="static/images/profile-website.png" alt="GitHub Profile" class="profile-img">
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="work-experience" class="section-content">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="work-experience-boxes">
+                <div class="work-box">
+                    <h3>AI Intern</h3>
+                    <p>Wipro Technologies, Bangalore - March to June 2023</p>
+                    <p>Focused on improving AI observability, Monitoring ML models...</p>
+                </div>
+                <div class="work-box">
+                    <h3>Engineer Trainee</h3>
+                    <p>Potentiam Ltd, Bangalore - September to Present</p>
+                    <p>Collaborating closely with the Founder Director...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="section-content">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certification-cards">
+                <!-- Each card will flip on hover -->
+                <div class="card">
+                    <div class="card-front">
+                        <h3>Open Source Models with Hugging Face</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>DeepLearning.AI - August 2024</p>
+                        <a href="https://learn.deeplearning.ai/accomplishments/028806ec-6c30-4359-ae48-b2747f7a303a?usp=sharing" target="_blank">See Credential</a>
+                    </div>
+                </div>
+                <!-- Add more certification cards as needed -->
+            </div>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Helvetica', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 20px;
+}
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2rem;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: white;
+    width: 10px;
+    height: 2rem;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Scroll Section */
+
+.section-content {
+    margin-bottom: 40px; /* Adds space between sections */
+    padding: 20px; /* Optional: Adjust padding if needed */
+}
+.scroll-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-top: 80px;
+    margin-bottom: 100px; /* Adds space after scroll section */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px; /* Adds space after section title */
+}
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+.scroll-item {
+    background-color: #121212;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 10px;
+    transition: 0.5s;
+    font-size: 1rem;
+}
+
+.scroll-item:hover, .scroll-item.active {
+    box-shadow: 0px 0px 15px #4d6061;
+    border: 1px solid #4d6061;
+    background-color: #000000;
+}
+
+/* .scroll-arrows {
+    display: flex;
+    gap: 10px;
+} */
+
+/* .scroll-arrows button {
+    background-color: #121212;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scroll-arrows button:hover {
+    background-color: #000000;
+} */
+
+/* About Me Section */
+.about-content {
+    position: relative;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #000000; /* Full black background */
+    /* border: 2px solid rgb(255, 255, 255); */
+    /* border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
+    align-items: center;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.8s ease; /* Transition effect */
+}
+
+.about-content:hover {
+    box-shadow: 0 0 15px #4d6061; /* Glowing effect on hover */
+}
+
+.about-text {
+    width: 90%; /* Adjust width to ensure the text wraps before touching the image */
+}
+
+.about-text h3 {
+    font-size: 1.6rem; /* Larger header-like text */
+    line-height: 1.2; /* Adjust line height for readability */
+    color: white;
+    margin-right: 20px; /* Spacing from the image */
+    margin-bottom: 20px;
+    word-wrap: break-word; /* Ensure text wraps naturally */
+}
+
+.about-text h6 {
+    font-size: 1.3rem; /* Larger header-like text */
+    line-height: 1.2; /* Adjust line height for readability */
+    color: #4d6061;
+    margin-right: 100px; /* Spacing from the image */
+    word-wrap: break-word; /* Ensure text wraps naturally */
+}
+
+.profile-img {
+    max-width: 300px;
+    border-radius: 15px;
+}
+
+/* .side-line {
+    position: absolute;
+    height: 100%;
+    width: 4px;
+    background-color: #fff; 
+    left: -20px;
+} */
+
+
+/* Work Experience Section */
+.work-experience-boxes {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.work-box {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s;
+    width: 45%;
+}
+
+.work-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Certifications Section */
+.certification-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    width: 200px;
+    height: 250px;
+    perspective: 1000px;
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s;
+}
+
+.card-front {
+    background-color: #333;
+    color: #fff;
+}
+
+.card-back {
+    background-color: #444;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
