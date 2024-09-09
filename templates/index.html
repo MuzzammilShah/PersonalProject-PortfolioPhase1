@@ -17,19 +17,19 @@
         </div>
 
         <!-- Scrollbar Section -->
-        <section class="scroll-section">
+        <!-- <section class="scroll-section">
             <div class="scroll-container">
                 <div class="scroll-item active">About Me</div>
                 <div class="scroll-item">Work Experience</div>
                 <div class="scroll-item">Certifications</div>
                 <div class="scroll-item">Roles & Responsibilities</div>
                 <div class="scroll-item">Education</div>
-            </div>
+            </div> -->
             <!-- <div class="scroll-arrows">
                 <button class="scroll-left">&lt;</button>
                 <button class="scroll-right">&gt;</button>
             </div> -->
-        </section>
+        <!-- </section> -->
 
         <!-- About Me Section -->
         <section id="about" class="section-content">
@@ -53,41 +53,83 @@
                         <div class="work-box-text">
                             <h3>AI Intern</h3>
                             <h5>Wipro Technologies, Bangalore</h5>
-                            <p>March to June 2023</p>
+                            <p>March - June 2023</p>
                         </div>
                     </div>
-                    <button class="read-more-btn">Read More</button>
+                    <button class="read-more-btn" data-modal="modal-wipro">Read More</button> <!-- Unique data attribute -->
                 </div>
 
                 <div class="work-box">
                     <div class="work-box-content">
                         <img src="static/images/company2-logo.png" alt="Potentiam Logo" class="company-logo">
                         <div class="work-box-text">
-                            <h3>Engineer Trainee</h3>
+                            <h3>AI Engineer Trainee</h3>
                             <h5>Potentiam Ltd, Bangalore</h5>
-                            <p>September to Present</p>
+                            <p>September - PRESENT</p>
                         </div>
                     </div>
-                    <button class="read-more-btn">Read More</button>
+                    <button class="read-more-btn" data-modal="modal-potentiam">Read More</button> <!-- Unique data attribute -->
                 </div>
             </div>
         </section>
 
         <!-- Modal (Pop-up) for Read More -->
-        <div id="modal" class="modal">
+        <!-- Modal for Wipro -->
+        <div id="modal-wipro" class="modal">
             <div class="modal-content">
                 <span class="close-btn">&times;</span>
                 <h3>AI Intern</h3>
                 <p><strong>Company:</strong> Wipro Technologies, Bangalore</p>
                 <p><strong>Time period:</strong> 1st March 2023 to 30th June 2023</p>
                 <p><strong>Description:</strong></p>
-                <p>Focused on improving AI observability, Monitoring ML models...</p>
+                <p>Focused on improving AI observability, Monitoring ML models, Conducting RCA, Detecting Anomalies, and Optimizing Capacity Forecasting, leading to enhanced performance, reliability, and scalability of the deployed models. Worked on developing and fine-tuning LLMs using LangChain, implementing a simple Q&A system over documents, optimizing its accuracy, and created an interface using Streamlit. This work enabled users to have interactive and informative conversations while effortlessly extracting valuable insights from large volumes of textual data</p>
                 <h4>Skills:</h4>
                 <div class="skills">
                     <button class="skill-btn">Python</button>
                     <button class="skill-btn">Time Series Forecasting</button>
-                    <button class="skill-btn">NLP</button>
-                    <!-- Add more skill buttons as needed -->
+                    <button class="skill-btn">Natural Language Processing (NLP)</button>
+                    <button class="skill-btn">NumPy</button>
+                    <button class="skill-btn">Scikit-Learn</button>
+                    <button class="skill-btn">Pandas</button>
+                    <button class="skill-btn">Large Language Models (LLM)</button>
+                    <button class="skill-btn">LangChain</button>
+                    <button class="skill-btn">Elastic Stack (ELK)</button>
+                    <button class="skill-btn">Datasets</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Potentiam -->
+        <div id="modal-potentiam" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>AI Engineer Trainee</h3>
+                <p><strong>Company:</strong> Potentiam Ltd, Bangalore</p>
+                <p><strong>Time period:</strong> 1st September, 2023 - PRESENT</p>
+                <p><strong>Description:</strong></p>
+                <p>Collaborating closely with the Founder Director and Global CIO of our company, primarily focusing on AI-driven initiatives. My contributions span various aspects of project management, research and development, and stakeholder engagement. Through my experience collaborating closely with senior leadership, I've honed my skills in project management, research, and stakeholder engagement. I've led initiatives such as AI-driven chatbot development, production and deployment web application tools for internal teams, and cybersecurity audits, each contributing to significant advancements within my organization.</p>
+                <h4>Skills:</h4>
+                <div class="skills">
+                    <button class="skill-btn">Python</button>
+                    <button class="skill-btn">Artificial Intelligence (AI)</button>
+                    <button class="skill-btn">Machine Learning</button>
+                    <button class="skill-btn">Chatbot Development</button>
+                    <button class="skill-btn">Business Requirements</button>
+                    <button class="skill-btn">Strategic Planning</button>
+                    <button class="skill-btn">Azure AI</button>
+                    <button class="skill-btn">Cybersecurity</button>
+                    <button class="skill-btn">Microsoft Power BI</button>
+                    <button class="skill-btn">Microsoft Power Apps</button>
+                    <button class="skill-btn">Microsoft Power Automate</button>
+                    <button class="skill-btn">IT Security Operations</button>
+                    <button class="skill-btn">Cybersecurity Auditing</button>
+                    <button class="skill-btn">Communication</button>
+                    <button class="skill-btn">Strategic Communications</button>
+                    <button class="skill-btn">Corporate Communications</button>
+                    <button class="skill-btn">Interpersonal Communication</button>
+                    <button class="skill-btn">Project Planning</button>
+                    <button class="skill-btn">Project Management</button>
+                    <button class="skill-btn">Docker</button>
                 </div>
             </div>
         </div>

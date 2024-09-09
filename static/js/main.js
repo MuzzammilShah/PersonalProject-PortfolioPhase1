@@ -57,26 +57,36 @@ window.onscroll = function() {
 
 // JavaScript to handle the modal popup
 document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('modal');
+    const modals = document.querySelectorAll('.modal');
     const readMoreButtons = document.querySelectorAll('.read-more-btn');
-    const closeBtn = document.querySelector('.close-btn');
+    const closeButtons = document.querySelectorAll('.close-btn');
 
-    // Show the modal when "Read More" is clicked
+    // Show the respective modal when "Read More" is clicked
     readMoreButtons.forEach(button => {
         button.addEventListener('click', () => {
-            modal.style.display = 'block';
+            const modalId = button.getAttribute('data-modal');
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+            }
         });
     });
 
     // Close the modal when the close button is clicked
-    closeBtn.addEventListener('click', () => {
-        modal.style.display = 'none';
+    closeButtons.forEach(closeBtn => {
+        closeBtn.addEventListener('click', () => {
+            modals.forEach(modal => {
+                modal.style.display = 'none';
+            });
+        });
     });
 
     // Close the modal when clicking outside the modal content
     window.addEventListener('click', (event) => {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
+        modals.forEach(modal => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
     });
 });
