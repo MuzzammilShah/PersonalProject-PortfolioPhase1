@@ -162,7 +162,7 @@ body {
     background-color: #000000;
     padding: 20px;
     border-radius: 15px;
-    transition: transform 0.3s, background-color 0.3s;
+    transition: transform 0.8s, background-color 0.8s, box-shadow 0.8s ease;
     width: 70%; /* Rectangular box */
     height: 200px; /* Fixed height */
     display: flex;
@@ -216,7 +216,8 @@ body {
 
 .work-box:hover {
     background-color: #000000; /* Solid color on hover */
-    transform: translateY(-10px);
+    /* transform: translateY(-10px); */
+    box-shadow: 0 0 15px #4d6061; 
 }
 
 .work-box:hover .work-box-content {
@@ -238,6 +239,10 @@ body {
 
 .work-box:hover .read-more-btn {
     display: block; /* Show the button on hover */
+}
+
+.read-more-btn:hover {
+    background-color: #222;
 }
 
 /* Modal (Pop-up) Styles */
@@ -309,15 +314,40 @@ p {
 /* End of Work Experience Section */
 
 /* Certifications Section */
+/* .certification-cards {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px;
+    justify-content: center; 
+} */
 .certification-cards {
     display: flex;
     gap: 20px;
+    justify-content: flex-start; /* Ensure cards align at the start */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    padding-bottom: 10px; /* Adds space for the scrollbar */
+    -webkit-overflow-scrolling: touch; /* Improves scroll behavior on touch devices */
+}
+.certification-cards::-webkit-scrollbar {
+    height: 8px; /* Adjust scrollbar height */
+}
+
+.certification-cards::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2); /* Make scrollbar thumb subtle */
+    border-radius: 10px;
+}
+
+.certification-cards::-webkit-scrollbar-track {
+    background-color: transparent; /* Make scrollbar track transparent */
 }
 
 .card {
     width: 200px;
     height: 250px;
     perspective: 1000px;
+    position: relative;
+    flex-shrink: 0; /* Prevent cards from shrinking */
 }
 
 .card-front, .card-back {
@@ -329,18 +359,43 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.5s;
+    transition: transform 0.5s ease-in-out;
 }
 
 .card-front {
     background-color: #333;
-    color: #fff;
+    overflow: hidden; /* Make sure the image fits in the card without overflow */
+}
+
+.cert-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the entire card front */
+    border-radius: 15px;
 }
 
 .card-back {
-    background-color: #444;
+    background-color: #000000;
     color: #fff;
     transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.card-back .cert-link-btn {
+    background-color: #4d6061;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card-back .cert-link-btn:hover {
+    background-color: #222;
 }
 
 .card:hover .card-front {
@@ -350,4 +405,17 @@ p {
 .card:hover .card-back {
     transform: rotateY(0deg);
 }
-/* Certifications Section */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .certification-cards {
+        justify-content: center; /* Center the cards on smaller screens */
+    }
+
+    .card {
+        width: 150px; /* Adjust size for smaller screens */
+        height: 200px;
+    }
+}
+
+/* End of Certifications Section */
