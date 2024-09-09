@@ -6,7 +6,10 @@
 }
 
 body {
-    background-color: #000000;
+    background-image: url('../images/wallpaper-1.png'); /* Replace with your image path */
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 250%; /* Fit image height to viewport */
     font-family: 'Helvetica', sans-serif;
     color: white;
     overflow-x: hidden;
@@ -47,7 +50,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin-top: 80px;
+    margin-top: 20px;
     margin-bottom: 100px; 
 }
 
@@ -94,7 +97,7 @@ body {
 /*Common for all the sub sections, they come under the same class*/
 .section-content {
     margin-bottom: 40px; /* Adds space between sections */
-    padding: 20px; /* Optional */
+    padding: 20px;
 }
 
 .section-title {
@@ -155,17 +158,147 @@ body {
 }
 
 .work-box {
-    background-color: #222;
+    position: relative;
+    background-color: #000000;
     padding: 20px;
     border-radius: 15px;
-    transition: transform 0.3s;
-    width: 45%;
+    transition: transform 0.3s, background-color 0.3s;
+    width: 70%; /* Rectangular box */
+    height: 200px; /* Fixed height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.work-box-content {
+    display: flex;
+    align-items: center;
+    padding: 10px; /* Add padding around the content */
+    width: 100%;
+}
+
+.company-logo {
+    width: 30%; /* Image occupies 20% */
+    /* height: auto; */
+    margin-right: 20px;
+}
+
+.work-box-text {
+    width: 80%; /* Text takes up 80% of the box */
+}
+
+.work-box-text h3{
+    font-size: 1.6rem;
+    line-height: 1; 
+    color: white;
+    margin-right: 20px; /* Spacing from the image */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    word-wrap: break-word; /* Ensure text wraps naturally */
+}
+.work-box-text h5{
+    font-size: 1.2rem;
+    line-height: 1; 
+    color: #4d6061;
+    margin-right: 20px; /* Spacing from the image */
+    margin-bottom: 10px;
+    word-wrap: break-word; /* Ensure text wraps naturally */
+}
+.work-box-text p{
+    font-size: 1rem;
+    line-height: 1; 
+    color: #4d6061;
+    margin-right: 20px; /* Spacing from the image */
+    /* margin-top: 20px; */
+    word-wrap: break-word; /* Ensure text wraps naturally */
 }
 
 .work-box:hover {
+    background-color: #000000; /* Solid color on hover */
     transform: translateY(-10px);
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.4);
 }
+
+.work-box:hover .work-box-content {
+    display: none; /* Hide the image and text on hover */
+}
+
+.read-more-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4d6061;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    display: none; /* Initially hidden */
+}
+
+.work-box:hover .read-more-btn {
+    display: block; /* Show the button on hover */
+}
+
+/* Modal (Pop-up) Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #333;
+    margin: 10% auto; /* Add more length to the modal */
+    padding: 30px; /* More padding for readability */
+    border-radius: 10px;
+    width: 60%; /* Increase the width */
+    color: white;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+h3, h4 {
+    margin-bottom: 15px; /* Add space after headers */
+}
+
+p {
+    margin-bottom: 20px; /* Add space between paragraphs */
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* More gap between skill buttons */
+}
+
+.skill-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+}
+
+/* Responsive Styles for Modal */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 80%;
+    }
+}
+
 /* End of Work Experience Section */
 
 /* Certifications Section */

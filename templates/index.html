@@ -48,17 +48,50 @@
             <h2 class="section-title">Work Experience</h2>
             <div class="work-experience-boxes">
                 <div class="work-box">
-                    <h3>AI Intern</h3>
-                    <p>Wipro Technologies, Bangalore - March to June 2023</p>
-                    <p>Focused on improving AI observability, Monitoring ML models...</p>
+                    <div class="work-box-content">
+                        <img src="static/images/company1-logo.png" alt="Wipro Logo" class="company-logo">
+                        <div class="work-box-text">
+                            <h3>AI Intern</h3>
+                            <h5>Wipro Technologies, Bangalore</h5>
+                            <p>March to June 2023</p>
+                        </div>
+                    </div>
+                    <button class="read-more-btn">Read More</button>
                 </div>
+
                 <div class="work-box">
-                    <h3>Engineer Trainee</h3>
-                    <p>Potentiam Ltd, Bangalore - September to Present</p>
-                    <p>Collaborating closely with the Founder Director...</p>
+                    <div class="work-box-content">
+                        <img src="static/images/company2-logo.png" alt="Potentiam Logo" class="company-logo">
+                        <div class="work-box-text">
+                            <h3>Engineer Trainee</h3>
+                            <h5>Potentiam Ltd, Bangalore</h5>
+                            <p>September to Present</p>
+                        </div>
+                    </div>
+                    <button class="read-more-btn">Read More</button>
                 </div>
             </div>
         </section>
+
+        <!-- Modal (Pop-up) for Read More -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h3>AI Intern</h3>
+                <p><strong>Company:</strong> Wipro Technologies, Bangalore</p>
+                <p><strong>Time period:</strong> 1st March 2023 to 30th June 2023</p>
+                <p><strong>Description:</strong></p>
+                <p>Focused on improving AI observability, Monitoring ML models...</p>
+                <h4>Skills:</h4>
+                <div class="skills">
+                    <button class="skill-btn">Python</button>
+                    <button class="skill-btn">Time Series Forecasting</button>
+                    <button class="skill-btn">NLP</button>
+                    <!-- Add more skill buttons as needed -->
+                </div>
+            </div>
+        </div>
+
 
         <!-- Certifications Section -->
         <section id="certifications" class="section-content">
